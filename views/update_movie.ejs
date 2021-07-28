@@ -1,0 +1,80 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/admin" class="link"><i class="fas fa-angle-double-left"></i> All Movies</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2>Update Movie</h2>
+            <span class="text">Use the below form to Update a movie</span>
+        </div>
+
+        <!-- add movie form -->
+        <!-- form handling -->
+        <form method="POST" action="/api/movies/<%= movie._id %>" id="update_movie" class="update_movie">
+            <div class="new_movie">
+                <div class="form-group">
+                    <label for="name" class="text-light">Name</label>
+                    <input type="hidden" name="id" value="<%= movie._id %>">
+                    <input type="text" name="name" value="<%= movie.name %>" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="Number" class="text-light">Number</label>
+                    <input type="text" name="number" value="<%= movie.number%>" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="Year" class="text-light">Year</label>
+                    <input type="text" name="year" value="<%= movie.year%>" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="Genre" class="text-light">Genre</label>
+                    <input type="text" name="genre" value="<%= movie.genre%>" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="Type" class="text-light">Type</label>
+                    <input type="text" name="type" value="<%= movie.type%>" placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="Description" class="text-light description">Description</label>
+                    <textarea name="description" id="" cols="45" rows="10" value="<%= movie.description%>"><%= movie.description%></textarea>
+                    <!-- <input type="text" name="description" value="<%= movie.description%>" placeholder=""> -->
+                </div>
+                <div class="form-group">
+                    <label for="Cast" class="text-light">Cast</label>
+                     <textarea name="cast" id="" cols="45" rows="5" value="<%= movie.cast%>"><%= movie.cast%></textarea>
+                    <!-- <input type="text" name="cast" value="<%= movie.cast%>" placeholder=""> -->
+                </div>
+                <div class="form-group">
+                    <label for="Poster" class="text-light">Poster</label>
+                    <input type="text" name="poster" value="<%= movie.poster%>" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="trailerLink" class="text-light">Trailer</label>
+                    <input type="text" name="trailerLink" value="<%= movie.trailerLink%>" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="movieLink" class="text-light">Movie</label>
+                    <input type="text" name="movieLink" value="<%= movie.movieLink%>" placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="update">Save</button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

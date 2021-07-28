@@ -1,0 +1,19 @@
+<% for(var i = 0; i < movies.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td class="wrap"><img src="<%= movies[i].poster %>" alt=""></td>
+    <td><%= movies[i].name %> / <%= movies[i].year %></td>
+    <td><%= movies[i].type %> - <%= movies[i].genre %></td>
+    <td class="cell_width"><%= movies[i].description %></td>
+    <td><%= movies[i].cast %></td>
+    
+    <td class="actions">
+        <a href="/update-movie?id=<%= movies[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" id="delete" data-id=<%= movies[i]._id%> >
+            <span class="text-gradient delete" id="delete" data-id=<%= movies[i]._id%>><i class="fas fa-times" ></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/logo_favicon.png" type="image/png">
+	<link rel="stylesheet" href="/css/style.css" type="text/css">
+	<title>Register Page</title>
+</head>
+<body>
+	<input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+	<header>
+		<nav class="menu">
+			<a href="/index" class="logo-link">
+				<div class="logo">
+					<img src="/images/logo.png" alt="Logo image">
+					<p>Movie Heaven</p>
+				</div>
+			</a>
+			<!-- <div class="tools">
+				<ul class="navigation">
+					<li><a href="/movies">Movies</a></li>
+					<li><a href="/tvseries">Tv series</a></li>
+					<li><a href="/kids">Kids</a></li>
+					<li><a href="/aboutus">About Us</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul> -->
+				<!-- <button onclick="searchToggle()" id="search-btn" class="button"><i class="fas fa-search"></i></button> -->
+				<!-- <button class="button"><a href="login"><i class="fas fa-user-circle"></i></a></button> -->
+				
+			</div>
+		</nav>
+		<form action="" class="search" id="search">
+			<div>
+				<input type="text" placeholder="Please type to search">
+				<button onclick="searchClose()" class="button"><i class="fas fa-times"></i></button>
+			</div>
+		</form>
+	</header>
+
+	<section class="login_section">
+		<h1>Register here: </h1>
+		<%- include ("./partials/messages"); %>
+		<form action="/users/register" method="POST" class="login_form">
+			<label for="name">Name</label>
+			<input 
+				type="name"
+				id="name"
+				name="name"
+				class="form-control"
+				placeholder="Enter Name"
+				value="<%= typeof name != 'undefined' ? name : '' %>"
+			>		
+			<label for="email">Email</label>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				class="form-control"
+				placeholder="Please enter your email.."
+				value="<%= typeof email != 'undefined' ? email : '' %>"
+			>
+			<label for="password">Password</label>
+			<input 
+				type="password"
+				id="password"
+				name="password"
+				class="form-control"
+				placeholder="Please enter you password.."
+				value="<%= typeof password != 'undefined' ? password : '' %>"
+			>
+			<label for="password2">Confirm Password</label>
+			<input
+				type="password"
+				id="password2"
+				name="password2"
+				class="form-control"
+				placeholder="Confirm Password"
+				value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+			>
+			<button type="submit">Register</button>
+			 <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
+		</form>
+		
+	</section>
+	
+</body>
+</html>

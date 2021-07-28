@@ -1,0 +1,107 @@
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/splide.min.css">
+	<link rel="stylesheet" href="css/splide-skyblue.min.css">	
+	<link rel="shortcut icon" href="images/logo_favicon.png" type="image/png">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Movie Heaven</title>
+</head>
+
+<body>
+	<input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+	<header>
+		<nav class="menu">
+			<a href="/index2" class="logo-link">
+				<div class="logo">
+					<img src="images/logo.png" alt="Logo image">
+					<p>Movie Heaven</p>
+				</div>
+			</a>
+			<div class="tools">
+				<ul class="navigation">
+					<li><a href="/movies">Movies</a></li>
+					<li><a href="/tvseries">Tv series</a></li>
+					<li><a href="/kids">Kids</a></li>
+					<li><a href="/aboutus">About Us</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+				<!-- <button onclick="searchToggle()" id="search-btn" class="button"><i class="fas fa-search"></i></button> -->
+				<!-- <button class="button"><a href="login"><i class="fas fa-user-circle"></i></a></button> -->
+				
+			</div>
+		</nav>
+		<form action="" class="search" id="search">
+			<div>
+				<input type="text" placeholder="Please type to search">
+				<button onclick="searchClose()" class="button"><i class="fas fa-times"></i></button>
+			</div>
+		</form>
+	</header>
+
+
+    <!-- Main Site -->
+    <main id="admin-main">
+        <div class="admin_container">
+            <div class="">
+                <a href="/add-movie">
+                    <span>New Movie <i class="fas fa-film"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="admin_table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+							<th>Poster</th>
+                            <th>Name / Year</th>
+                            <th>Type / Genre</th>
+                            <th>Description</th>
+                            <th>Cast</th>                            
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+	<footer>
+		<div class="social">
+			<i class="fab fa-facebook-f"></i>
+			<i class="fab fa-twitter"></i>
+			<i class="fab fa-youtube"></i>
+			<i class="fab fa-instagram"></i>
+		</div>
+		<div class="useful_links">
+			<a href="/questions">Often asked questions</a>
+			<a href="/terms">Terms of use</a>
+			<a href="/privacypolicy">Privacy Policy</a>
+			<a href="/contact">Contact</a>
+			<a href="/cookiepolicy">Cookies Policy</a>
+			<a href="#">English <i class="fas fa-angle-down"></i></a>
+		</div>
+		<div class="rights">
+			<p>© 2021 MovieHeaven, Inc. All Rights Reserved. This website could contain content that is not suitable for children.</p>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>

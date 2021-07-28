@@ -1,0 +1,11 @@
+<% for(var i = 0; i < movies.length; i++) { %>
+	<div>
+		<td><%= i + 1 %></td>
+		<img src="<%= movies[i].poster %>" alt="">
+		<p><%= movies[i].name %></p>
+		<p><%= movies[i].year %></p>
+		<p><%= movies[i].genre %></p>
+		<p><%= movies[i].description %></p>
+		<p><%= movies[i].cast %></p>
+	</div>
+	<% } %>

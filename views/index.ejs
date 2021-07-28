@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/splide.min.css" type="text/css">
+	<link rel="stylesheet" href="css/splide-skyblue.min.css" type="text/css">	
+	<link rel="shortcut icon" href="images/logo_favicon.png" type="image/png">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Movie Heaven</title>
+</head>
+
+<body>
+	<input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+	<header>
+		<nav class="menu">
+			<a href="/index" class="logo-link">
+				<div class="logo">
+					<img src="images/logo.png" alt="Logo image">
+					<p>Movie Heaven</p>
+				</div>
+			</a>
+			<div class="tools">
+				<ul class="navigation">
+					<li><a href="/movies">Movies</a></li>
+					<li><a href="/tvseries">Tv series</a></li>
+					<li><a href="/kids">Kids</a></li>
+					<li><a href="/aboutus">About Us</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+				<!-- <button onclick="searchToggle()" id="search-btn" class="button"><i class="fas fa-search"></i></button> -->
+				<button class="button"><a href="login"><i class="fas fa-user-circle"></i></a></button>
+			</div>
+		</nav>
+		<form action="" class="search" id="search">
+			<div>
+				<input type="text" placeholder="Please type to search">
+				<button onclick="searchClose()" class="button"><i class="fas fa-times"></i></button>
+			</div>
+		</form>
+	</header>
+
+
+	<main>
+		<section class="slider_wrapper">
+			<h2 id="marvel_header">New Upcoming Movies</h2>
+			<div id="slider" class="slider">
+				<ul class="slides">
+					<li class="slide"><a href="#"><img src="images/new_no_time_to_die.jpg"
+								alt="No Time to die movie poster"></a></li>
+					<li class="slide"><a href="#"><img src="images/new_blackwidow.jpg" alt="Black Widow movie poster"></a>
+					</li>
+					<li class="slide"><a href="#"><img src="images/new_fast_and_furious_nine.jpg"
+								alt="Fast and Furious 9 movie poster"></a></li>
+					<li class="slide"><a href="#"><img src="images/new_minions.jpg" alt="Minions movie poster"></a></li>
+					<li class="slide"><a href="#"><img src="images/new_wonder_woman.jpg"
+								alt="Wonder Woman movie poster"></a></li>
+					<li class="slide"><a href="#"><img src="images/new_tenet.jpg" alt="Tenet movie poster"></a></li>
+					<li class="slide"><a href="#"><img src="images/new_no_time_to_die.jpg"
+								alt="No Time to die movie poster"></a></li>
+					<li class="slide"><a href="#"><img src="images/new_blackwidow.jpg" alt="Black Widow movie poster"></a>
+					</li>
+					<li class="slide"><a href="#"><img src="images/new_fast_and_furious_nine.jpg"
+								alt="Fast and Furious 9 movie poster"></a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="website_info">
+			<h2>Welcome to the Movie Heaven, the place where you can find information about movies, tv series, etc.</h2>
+			<div class="website_content">
+				<div class="content_info">
+					<h3>Movies</h3>
+					<p>In Movie Heaven we have description of thousands of movies divided into different categories,
+						different genres and time of making.</p>
+				</div>
+				<div class="content_info">
+					<h3>TV Series</h3>
+					<p>Here you can find information about the most famous and popular TV series ever made.</p>
+				</div>
+				<div class="content_info">
+					<h3>Kids Shows</h3>
+					<p>We did not forget about the kids. We have many animated series, just for them. </p>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="marvel_section">
+			<!-- <div class="video_container">
+				<video class="marvel_video" id="marvel_video" autoplay muted  height="500pt">
+					<source src="assets/videos/marvel_video.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			<button onclick="closeVideo()" class="close_video_btn" id="close_video_btn">Close video</button> -->
+			</div>
+				<h2>Marvel Movies</h2>
+				<div class="splide" id="splide">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide" id="splide__slide">
+								<img  src="images/marvel_antman.jfif" alt="Marvel Antman" class="image">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Ant Man</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.3/10</p>
+										</div>
+									</div>
+									<p>Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, plan and pull off a heist that will save the world.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_avengers.jpg" alt="Marvel Avengers"  class="image">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Avengers</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>8.0/10</p>
+										</div>
+									</div>
+									<p>Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_avengers_ageofultron.jpg" alt="Marvel Avengers Age of Ultron" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Avengers Age of Ultron</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.3/10</p>
+										</div>
+									</div>
+									<p>When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_avengers_endgame.jpg" alt="Marvel Avengers Endgame" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Avengers Endgame</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>8.4/10</p>
+										</div>
+									</div>
+									<p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_avengers_infinitywar.png" alt="Marvel Avengers Infinity War" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Avengers Infinity War</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>8.4/10</p>
+										</div>
+									</div>
+									<p>The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_blackpanther.jpeg" alt="Marvel Black Panther" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Black Panther</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.3/10</p>
+										</div>
+									</div>
+									<p>T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_captainamerica_civilwar.jpeg" alt="Marvel Captain America Civil War" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Captain America Civil War</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.8/10</p>
+										</div>
+									</div>
+									<p>Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_captainamerica_thewintersoldier.jpeg" alt="Marvel Captain America The Winter Soldier" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Captain America The Winter Soldier</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.7/10</p>
+										</div>
+									</div>
+									<p>As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_captainmarvel.jpg" alt="Marvel Captain Marvel" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Captain Marvel</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>6.9/10</p>
+										</div>
+									</div>
+									<p>After crashing an experimental aircraft, Air Force pilot Carol Danvers is discovered by the Kree and trained as a member of the elite Starforce Military under the command of her mentor Yon-Rogg. Six years later, after escaping to Earth while under attack by the Skrulls, Danvers begins to discover there's more to her past.  Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. </p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_guardiansofthegalaxy.jpg" alt="Marvel Guardians of the Galaxy" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Guardians of the Galaxy</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>8.0/10</p>
+										</div>
+									</div>
+									<p>After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth is now the main target of a manhunt led by the villain known as Ronan the Accuser. To help fight Ronan and his team and save the galaxy from his power, Quill creates a team of space heroes known as the "Guardians of the Galaxy" to save the galaxy. </p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_hulk.jfif" alt="Marvel Hulk" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Marvel Hulk</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>5.6/10</p>
+										</div>
+									</div>
+									<p>Bruce is an ordinary Gamma expert who one day gets blasted with radiation and somehow survives. But in the process a monster was born. Now whenever he gets angry he grows bigger and stronger until he is no longer Bruce Banner. He becomes The Hulk</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_ironman.jpg" alt="Marvel Iron Man" title=" ">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Iron Man</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.9/10</p>
+										</div>
+									</div>
+									<p>After being captured, the billionaire and genious Tony Stark invents a robotic suit and he becomes the superhero Iron Man. He uses the primitive device to escape from the cave in Iraq. Once back home, he then begins work on perfecting the Iron Man suit. But the man who was put in charge of Stark Industries has plans of his own to take over Tony's technology for other matters.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_spiderman_homecoming.jpg" alt="Marvel Spider Man Homecoming" title="">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Spider Man Homecoming</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.4/10</p>
+										</div>
+									</div>
+									<p>Peter Parker returns home, where he lives with his Aunt May, under the watchful eye of his new mentor Tony Stark. Peter tries to fall back into his normal daily routine - distracted by thoughts of proving himself to be more than just your friendly neighborhood Spider-Man - but when the Vulture emerges as a new villain, everything that Peter holds most important will be threatened.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="images/marvel_thor.jpg" alt="Marvel Thor" title="">
+								<div class="overlay last" id="overlay">
+									<div class="overlay-container">
+										<h3>Thor</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.0/10</p>
+										</div>
+									</div>
+									<p>The warrior Thor (Chris Hemsworth) is cast out of the fantastic realm of Asgard by his father Odin (Sir Anthony Hopkins) for his arrogance and sent to Earth to live amongst humans. Falling in love with scientist Jane Foster (Natalie Portman) teaches Thor much-needed lessons, and his new-found strength comes into play as a villain from his homeland sends dark forces toward Earth.</p>
+								</div>
+							</li>
+							
+					</div>
+
+					<div class="splide__progress">
+						<div class="splide__progress__bar">
+						</div>
+					</div>
+				</div>
+
+
+		</section>
+
+
+		<section>
+				<h2>Popular Movies</h2>
+				<div class="splide splide_popular">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<img src="./images/popular_365days.jpg" alt="365 days">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>365 Days</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>3.3/10</p>
+										</div>
+									</div>
+									<p>Massimo is a member of the Sicilian Mafia family and Laura is a sales director. She does not expect that on a trip to Sicily trying to save her relationship, Massimo will kidnap her and give her 365 days to fall in love with him.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_afterwecollided.jpg" alt="After we collided">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>After we collided</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>5.0/10</p>
+										</div>
+									</div>
+									<p>Based on the 2014 romance novel of the same name, this follows the love life of two young adults.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_beautyandthebeast.jpg" alt="Beauty and the beast">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Beauty and the Beast</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.1/10</p>
+										</div>
+									</div>
+									<p>A selfish Prince is cursed to become a monster for the rest of his life, unless he learns to fall in love with a beautiful young woman he keeps prisoner.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_diehard.jpg" alt="Die hard">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Die Hard</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>8.2/10</p>
+										</div>
+									</div>
+									<p>An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_greenland.jpg" alt="Greenland">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Greenland </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>6.4/10</p>
+										</div>
+									</div>
+									<p>A family struggles for survival in the face of a cataclysmic natural disaster.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_harrypotter.jpg" alt="Harry Potter">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Harry Potter</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.6/10</p>
+										</div>
+									</div>
+									<p>An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_homealone.jpg" alt="Home Alone">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Home Alone</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.6/10</p>
+										</div>
+									</div>
+									<p>An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_honestthief.jpg" alt="Honest Thief">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Honest Thief</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>6.0/10</p>
+										</div>
+									</div>
+									<p>Wanting to lead an honest life, a notorious bank robber turns himself in, only to be double-crossed by two ruthless FBI agents.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_loveactually.jpg" alt="Love Actually">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Love Actually</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.6/10</p>
+										</div>
+									</div>
+									<p>Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_monsterhunt.jpg" alt="Monster Hunt">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Monster Hunter</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>5.3/10</p>
+										</div>
+									</div>
+									<p>When Lt. Artemis and her loyal soldiers are transported to a new world, they engage in a desperate battle for survival against enormous enemies with incredible powers. Feature film based on the video game by Capcom.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_mulan.jpg" alt="Mulan">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Mulan </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>5.6/10</p>
+										</div>
+									</div>
+									<p>A young Chinese maiden disguises herself as a male warrior in order to save her father.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_soul.jpg" alt="Soul">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Soul </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>8.2/10</p>
+										</div>
+									</div>
+									<p>A musician who has lost his passion for music is transported out of his body and must find his way back with the help of an infant soul learning about herself.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_thegodfather.jpg" alt="The Godfather">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Godfather</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>9.2/10</p>
+										</div>
+									</div>
+									<p>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_thekaratekid.jpg" alt="The Karate Kid">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Karate Kid</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.3/10</p>
+										</div>
+									</div>
+									<p>A martial arts master agrees to teach karate to a bullied teenager.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_thedarkknight.jpg" alt="The Dark Knight">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Dark Knight</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>9.0/10</p>
+										</div>
+									</div>
+									<p>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_theshawshankredemption.jpg" alt="The Shawshank Redemption">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Shawshank Redemption</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>9.3/10</p>
+										</div>
+									</div>
+									<p>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_thewitches.jpg" alt="The Witches">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Witches</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>5.3/10</p>
+										</div>
+									</div>
+									<p>A young boy and his grandmother have a run-in with a coven of witches and their leader.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_jumanji.jpg" alt="Jumanji">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Jumanji: Welcome to the Jungle</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>6.9/10</p>
+										</div>
+									</div>
+									<p>Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_dune.jpg" alt="Dune">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Dune</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>7.3/10</p>
+										</div>
+									</div>
+									<p>Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_dolittle.jpg" alt="Dolittle">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Dolittlen</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>5.6/10</p>
+										</div>
+									</div>
+									<p>A physician who can talk to animals embarks on an adventure to find a legendary island with a young apprentice and a crew of strange pets.</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/popular_starwars.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Star Wars: The Rise of Skywalker</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img" >
+											<p>6.6/10</p>
+										</div>
+									</div>
+									<p>The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+		</section>
+
+		<section>
+				<h2 id="">James Bond Movies</h2>
+				<div class="splide splide_bond">
+					<div class="splide__track">
+						<ul class="splide__list">						
+							<li class="splide__slide">
+								<img src="./images/bond_1.jpg" alt="Spectre">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Spectre </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.8/10</p>
+										</div>
+									</div>
+									<p>
+										A cryptic message from James Bond's past sends him on a trail to uncover the existence of a sinister organisation named SPECTRE. With a new threat dawning, Bond learns the terrible truth about the author of all his pain in his most recent missions.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_2.jpg" alt="Skyfall">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Skyfall</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.7/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond's loyalty to M is tested when her past comes back to haunt her. When MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_3.jpg" alt="Quantum of Solace">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Quantum of Solace</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.6/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond descends into mystery as he tries to stop a mysterious organisation from eliminating a country's most valuable resource.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_4.jpg" alt="Casino Royale">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Casino Royale</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.0/10</p>
+										</div>
+									</div>
+									<p>
+										After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_5.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Die Another Day</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.1/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond is sent to investigate the connection between a North Korean terrorist and a diamond mogul, who is funding the development of an international space weapon.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_6.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The World is Not Enough</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.4/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond uncovers a nuclear plot while protecting an oil heiress from her former kidnapper, an international terrorist who can't feel pain.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_7.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Tomorrow Never Dies </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.5/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond sets out to stop a media mogul's plan to induce war between China and the UK in order to obtain exclusive global media coverage.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_8.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>GoldenEye</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.2/10</p>
+										</div>
+									</div>
+									<p>
+										Years after a friend and fellow 00 agent is killed on a joint mission, a secret space based weapons program known as "GoldenEye" is stolen. James Bond sets out to stop a Russian crime syndicate from using the weapon.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_9.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>007: Licence to Kill</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.4/10</p>
+										</div>
+									</div>
+									<p>
+										An action/arcade game based on the movie with the same name. Your aim is to revenge the death of Felix Leiter, who was killed by the drug baron Sanchez.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_10.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Living Daylights</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.7/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond is sent to investigate a KGB policy to kill all enemy spies and uncovers an arms deal that potentially has major global ramifications.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_11.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>A View to a Kill</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.4/10</p>
+										</div>
+									</div>
+									<p>
+										The recovery of a microchip off the body of a fellow agent leads James Bond to a mad industrialist who plans to create a worldwide microchip monopoly by destroying California's Silicon Valley.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_12.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Octopussy</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.6/10</p>
+										</div>
+									</div>
+									<p>
+										A fake Fabergé egg, and a fellow Agent's death, lead James Bond to uncover an international jewel-smuggling operation, headed by the mysterious Octopussy, being used to disguise a nuclear attack on N.A.T.O. forces.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_13.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>For Your Eyes Only</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.7/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond is assigned to find a missing British vessel, equipped with a weapons encryption device and prevent it from falling into enemy hands.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/bond_14.jpg" alt="StarWars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Moonraker</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.3/10</p>
+										</div>
+									</div>
+									<p>
+										James Bond investigates the mid-air theft of a space shuttle, and discovers a plot to commit global genocide.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+		</section>
+
+		<section>
+				<h2 id="">TV Series</h2>
+				<div class="splide splide_tvseries">
+					<div class="splide__track">
+						<ul class="splide__list">						
+							<li class="splide__slide">
+								<img src="./images/tvseries_24.jpg" alt="24">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>24</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.3/10</p>
+										</div>
+									</div>
+									<p>
+										Jack Bauer races against the clock to subvert terrorist plots and save his nation from ultimate disaster.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_agentsofshield.jpg" alt="Marvel's Agents of S.H.I.E.L.D">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Agents of S.H.I.E.L.D.</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.5/10</p>
+										</div>
+									</div>
+									<p>
+										The missions of the Strategic Homeland Intervention, Enforcement and Logistics Division.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_alloallo.jpg" alt="Allo Allo">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>'Allo 'Allo </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.3/10</p>
+										</div>
+									</div>
+									<p>
+										In France during World War II, Rene Artois runs a small café where Resistance fighters, Gestapo men, German Army officers and escaped Allied POWs interact daily, ignorant of one another's true identity or presence, exasperating Rene.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_arrow.jpg" alt="Arrow">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Arrow</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.5/10</p>
+										</div>
+									</div>
+									<p>
+										Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_gossipgirl.jpg" alt="Gossip Girl">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Gossip Girl </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.4/10</p>
+										</div>
+									</div>
+									<p>
+										Privileged teens living on the Upper East Side of New York can hide no secret from the ruthless blogger who is always watching.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_legendsoftomorrow.jpg" alt="DC's Legends Of Tomorrow">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Legends of Tomorrow</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.8/10</p>
+										</div>
+									</div>
+									<p>
+										Time-travelling rogue Rip Hunter has to recruit a rag-tag team of heroes and villains to help prevent an apocalypse that could impact not only Earth, but all of time.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_prisonbreak.jpg" alt="Prison Break">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Prison Break</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.3/10</p>
+										</div>
+									</div>
+									<p>
+										Due to a political conspiracy, an innocent man is sent to death row and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break the both of them out, from the inside.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_teenwolf.jpg" alt="Teen Wolf">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Teen Wolf </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.6/10</p>
+										</div>
+									</div>
+									<p>
+										An average high school student and his best friend get caught up in some trouble causing him to receive a werewolf bite. As a result they find themselves in the middle of all sorts of dramas in Beacon Hills.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_theflash.jpg" alt="The Flash">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Flash </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.7/10</p>
+										</div>
+									</div>
+									<p>
+										After being struck by lightning, Barry Allen wakes up from his coma to discover he's been given the power of super speed, becoming the next Flash, fighting crime in Central City.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_themandalorian.jpg" alt="The Mandalorian">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Mandalorian </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.8/10</p>
+										</div>
+									</div>
+									<p>
+										The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_thequeensgambit.jpg" alt="The Queen's Gambit">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>The Queen's Gambit </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.6/10</p>
+										</div>
+									</div>
+									<p>
+										Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/tvseries_twoandahalfmen.jpg" alt="Two and a Half Men">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Two and a Half Men </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.0/10</p>
+										</div>
+									</div>
+									<p>
+										A hedonistic jingle writer's free-wheeling life comes to an abrupt halt when his brother and 10-year-old nephew move into his beach-front house.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+		</section>
+
+		<section>
+				<h2 id="">Kids Shows</h2>
+				<div class="splide splide_kids">
+					<div class="splide__track">
+						<ul class="splide__list">						
+							<li class="splide__slide">
+								<img src="./images/kids_avatar.jpg" alt="Avatar">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Avatar: The Last Airbender </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>9.2/10</p>
+										</div>
+									</div>
+									<p>
+										In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_beyblade.jpg" alt="Beyblade">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Beyblade </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.9/10</p>
+										</div>
+									</div>
+									<p>
+										Four beybladers and their genius friend travel the world as team 'Bladebreakers' to win a championship, realizing there's much more at stake on the go.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_cars.jpg" alt="Cars">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Cars</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.1/10</p>
+										</div>
+									</div>
+									<p>
+										A hot-shot race-car named Lightning McQueen gets waylaid in Radiator Springs, where he finds the true meaning of friendship and family.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_gormiti.jpg" alt="Gormiti">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Gormiti </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>4.3/10</p>
+										</div>
+									</div>
+									<p>
+										The show follows two brothers, Nick and Toby, who discover that they have the power to transform into powerful creatures known as Gormitis. Their two friends Jessica and Lucas join the fight, and together they harness the power of the four elements. Now it's up to them to save their world, and many others, from destruction.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_justiceleague.jpg" alt="Justice League">
+									<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Justice League</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.5/10</p>
+										</div>
+									</div>
+									<p>
+										Seven of the most formidable heroes form arguably the most powerful team ever.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_minions.jpg" alt="Minions">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Minions </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.4/10</p>
+										</div>
+									</div>
+									<p>
+										Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_scoobydoo.jpg" alt="Scooby Doo">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Scooby Doo, Where Are You! </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.9/10</p>
+										</div>
+									</div>
+									<p>
+										A group of teenage friends and their Great Dane (Scooby-Doo) travel in a bright green van solving strange and hilarious mysteries, while returning from or going to a regular teenage function.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_sesamistreet.jpg" alt="Sesami Street">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Sesame Street </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>8.1/10</p>
+										</div>
+									</div>
+									<p>
+										On a special inner city street, the inhabitants, human and muppet, teach preschool subjects with comedy, cartoons, games, and songs.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_spiderman.jpg" alt="Spider Man">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Spider-Man</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>6.1/10</p>
+										</div>
+									</div>
+									<p>
+										Peter Parker, a new student at the famous Horizon High, fights evil super-villains as the costumed superhero, Spider-Man.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_teentitans.jpg" alt="Teen Titans">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Teen Titans</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.8/10</p>
+										</div>
+									</div>
+									<p>
+										A team of five teenaged superheroes save the world from many villains around their city while experiencing things normal teens face today.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_teletubbies.jpg" alt="Teletubbies">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Teletubies</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>3.7/10</p>
+										</div>
+									</div>
+									<p>
+										Four creatures with televisions in their stomachs have fun in their magical world.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_tom&jerry.jpg" alt="Tom and Jerry">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Tom & Jerry</h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>/10</p>
+										</div>
+									</div>
+									<p>
+										Adaption of the classic Hanna-Barbera property, which reveals how Tom and Jerry first meet and form their rivalry.
+									</p>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<img src="./images/kids_yigioh.jpg" alt="Yu-Gi-Oh">
+								<div class="overlay" id="overlay">
+									<div class="overlay-container">
+										<h3>Yu-Gi-Oh! </h3>
+										<div>
+											<img src="images/imdb.jfif" alt="IMDB logo" id="splide_img">
+											<p>7.2/10</p>
+										</div>
+									</div>
+									<p>
+										Yugi Moto solves an Ancient Egyptian Puzzle and brings forth a dark and powerful alter ego. Whenever he and his friends are threatened by evil in Duel Monster Card Game, this alter ego breaks out to save them.
+									</p>
+								</div>
+							</li>
+	
+						</ul>
+					</div>
+				</div>
+
+
+		</section>
+
+		<section>
+			<div class="desktop">
+				<div class="device_compatability">
+					<hr><h2>Watch on your favourite device</h2><hr>
+				</div>
+				<div class="device_compatability">
+					<div class="device"> 
+						<img src="./images/compat_desktop.png" alt="Desktop">
+						<p>Smart TV</p>
+					</div>
+					<div class="device">
+						<img src="./images/compat_tablet.png" alt="Tablet">
+						<p>Tablet</p>
+					</div>
+					<div class="device">
+						<img src="./images/compat_smartphone.png" alt="Smartphone">
+						<p>Smartphone</p>	
+					</div>
+					<div class="device">
+						<img src="./images/compat_appletv.png" alt="AppleTV">
+						<p>AppleTv</p>
+					</div>
+					<div class="device">
+						<img src="./images/compat_chromecast.png" alt="Chromecast">
+						<p>Chromecast</p>
+					</div>
+					<div class="device">
+						<img src="./images/compat_gameconsole.png" alt="Game Console">
+						<p>Game Console</p>
+					</div>
+					<div class="device">
+						<img src="./images/compat_computer.png" alt="Computer">
+						<p>Computer</p>
+					</div>
+				</div>
+			</div>
+			<div class="tablet-mobile">
+				<h2>Watch on your favourite device</h2>
+				<img src="./images/compat_combined.PNG" alt="Compatible devices">
+				<p>Smart TV, Tablet, Smartphone, AppleTv, Chromecast, Game Console, Computer</p>
+			</div>
+		</section>
+	</main>
+
+
+
+	<footer>
+		<div class="social">
+			<i class="fab fa-facebook-f"></i>
+			<i class="fab fa-twitter"></i>
+			<i class="fab fa-youtube"></i>
+			<i class="fab fa-instagram"></i>
+		</div>
+		<div class="useful_links">
+			<a href="/questions">Often asked questions</a>
+			<a href="/terms">Terms of use</a>
+			<a href="/privacypolicy">Privacy Policy</a>
+			<a href="/contact">Contact</a>
+			<a href="/cookiepolicy">Cookies Policy</a>
+			<a href="#">English <i class="fas fa-angle-down"></i></a>
+		</div>
+		<div class="rights">
+			<p>© 2021 MovieHeaven, Inc. All Rights Reserved. This website could contain content that is not suitable for children.</p>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+	<script src="js/splide.min.js"></script>
+	<script src="https://kit.fontawesome.com/7615800276.js" crossorigin="anonymous"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

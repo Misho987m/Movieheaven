@@ -1,0 +1,53 @@
+ <!-- form handling -->
+ <form action="/api/movies" method="POST" id="add_movie" class="update_movie">
+    <div class="new_movie">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="">
+        </div>
+         <!-- <div class="form-group">
+            <label for="Number" class="text-light">Number</label>
+            <input type="text" name="number" value="" placeholder="">
+        </div> -->
+        <div class="form-group">
+            <label for="Year" class="text-light">Year</label>
+            <input type="text" name="year" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="Genre" class="text-light">Genre</label>
+            <input type="text" name="genre" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="Type" class="text-light">Type</label>
+            <input type="text" name="type" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="Description" class="text-light description">Description</label>
+            <textarea name="description" id="" cols="40" rows="5"></textarea>
+            <!-- <input type="text" name="description" value="" placeholder=""> -->
+        </div>
+        <div class="form-group">
+            <label for="Cast" class="text-light">Cast</label>
+            <textarea name="cast" id="" cols="40" rows="5"></textarea>
+            <!-- <input type="text" name="cast" value="" placeholder=""> -->
+        </div>
+        <div class="form-group">
+            <label for="Poster" class="text-light">Poster</label>
+            <input type="text" name="poster" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="trailerLink" class="text-light">Trailer</label>
+            <input type="text" name="trailerLink" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="movieLink" class="text-light">Movie</label>
+            <input type="text" name="movieLink" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

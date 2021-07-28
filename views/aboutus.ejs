@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/slider/dist/css/splide.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/slider/dist/css/themes/splide-skyblue.min.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="shortcut icon" href="images/logo_favicon.png" type="image/png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Movie Heaven</title>
+</head>
+
+<body>
+	<input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+	<header>
+		<nav class="menu">
+			<a href="/index2" class="logo-link">
+				<div class="logo">
+					<img src="images/logo.png" alt="Logo image">
+					<p>Movie Heaven</p>
+				</div>
+			</a>
+			<div class="tools">
+				<ul class="navigation">
+					<li><a href="/movies">Movies</a></li>
+					<li><a href="/tvseries">Tv series</a></li>
+					<li><a href="/kids">Kids</a></li>
+					<li><a href="/aboutus">About Us</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+				<!-- <button onclick="searchToggle()" id="search-btn" class="button"><i class="fas fa-search"></i></button> -->
+				<!-- <button class="button"><a href="login"><i class="fas fa-user-circle"></i></a></button> -->
+				<p class="login_name"><%= user.name %> </p>
+				<a href="/users/logout" class="logout_btn">Logout</a>
+			</div>
+		</nav>
+		<form action="" class="search" id="search">
+			<div>
+				<input type="text" placeholder="Please type to search">
+				<button onclick="searchClose()" class="button"><i class="fas fa-times"></i></button>
+			</div>
+		</form>
+	</header>
+
+
+	<main>
+		<div class="split">
+			<div>
+				<h2>Who are we?</h2>
+				<p>
+					We believe in a world where you have total freedom to be you, without judgement. To experiment. To express yourself. To be brave and grab life as the extraordinary adventure it is. So we make sure everyone has an equal chance to discover all the amazing things they’re capable of – no matter who they are, where they’re from or what looks they like to boss. We exist to give you the confidence to be whoever you want to be.
+				</p>
+			</div>
+			<img src="/images/team.png" alt="Team">
+		</div>
+		<div class="split">
+			<img src="/images/cozy.jpg" alt="Cozy">
+			<div>
+				<h2>Choice For All</h2>
+				<p>
+					Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find your fit, offering our Movies, Tv series and kids show – and we're committed to providing more and more content every day – so you can be confident we’ve got the perfect thing for you. We’re also proud to partner with GLAAD, one of the biggest voices in the movie world , on a gender-neutral collection to unite in accelerating acceptance.
+				</p>
+			</div>
+		</div>
+		<div class="center">
+			<h2>Where can you find us?</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.161283031812!2d23.09557421468853!3d42.01827237921124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aaf6079c20fe19%3A0xfdbe9818701ff593!2zMjcwMCDQkdC70LDQs9C-0LXQstCz0YDQsNC0INCm0LXQvdGC0YrRgCwg0JHQu9Cw0LPQvtC10LLQs9GA0LDQtA!5e0!3m2!1sbg!2sbg!4v1610730401097!5m2!1sbg!2sbg" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="map"></iframe>
+		</div>
+	</main>
+
+
+	<footer>
+		<div class="social">
+			<i class="fab fa-facebook-f"></i>
+			<i class="fab fa-twitter"></i>
+			<i class="fab fa-youtube"></i>
+			<i class="fab fa-instagram"></i>
+		</div>
+		<div class="useful_links">
+			<a href="/questions">Often asked questions</a>
+			<a href="/terms">Terms of use</a>
+			<a href="/privacypolicy">Privacy Policy</a>
+			<a href="/contact">Contact</a>
+			<a href="/cookiepolicy">Cookies Policy</a>
+			<a href="#">English <i class="fas fa-angle-down"></i></a>
+		</div>
+		<div class="rights">
+			<p>© 2021 MovieHeaven, Inc. All Rights Reserved. This website could contain content that is not suitable for children.</p>
+		</div>
+	</footer>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+	<script src="assets/slider/dist/js/splide.min.js"></script>
+	<script src="https://kit.fontawesome.com/7615800276.js" crossorigin="anonymous"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

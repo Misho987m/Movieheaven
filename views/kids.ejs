@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="shortcut icon" href="images/logo_favicon.png" type="image/png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Movie Heaven</title>
+</head>
+
+<body>
+	<input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+	<header>
+		<nav class="menu">
+			<a href="/index2" class="logo-link">
+				<div class="logo">
+					<img src="images/logo.png" alt="Logo image">
+					<p>Movie Heaven</p>
+				</div>
+			</a>
+			<div class="tools">
+				<ul class="navigation">
+					<li><a href="/movies">Movies</a></li>
+					<li><a href="/tvseries">Tv series</a></li>
+					<li><a href="/kids">Kids</a></li>
+					<li><a href="/aboutus">About Us</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+				<button onclick="searchToggle()" id="search-btn" class="button"><i class="fas fa-search"></i></button>
+				<!-- <button class="button"><a href="login"><i class="fas fa-user-circle"></i></a></button> -->
+				<p class="login_name"><%= user.name %> </p>
+				<a href="/users/logout" class="logout_btn">Logout</a>
+			</div>
+		</nav>
+		<form action="/search" class="search" id="search" method="get">
+			<div>
+				<input type="text" id="dsearch" name="dsearch" placeholder="Please type to search">
+				<button onclick="searchClose()" class="button" ><i class="fas fa-times"></i></button>
+			</div>
+		</form>
+	</header>
+
+
+
+
+	<main>
+		<div class="grid_container">
+		<% for(var i = 0; i < movies.length; i++) { %>	
+			<% if(movies[i].type === 'Animation') { %>	
+				<div class="grid_item">
+					<a onclick="document.getElementById('id<%= movies[i].poster %>').style.display='block'"><img src="<%= movies[i].poster %>" alt=""></a>
+					<p>Name: <%= movies[i].name %></p>
+					<p>Year: <%= movies[i].year %></p>
+					<p>Genre: <%= movies[i].genre %></p>
+				</div>	
+			<% } %>	
+			<div id="id<%= movies[i].poster %>" class="modal">  
+					<form class="modal-content animate" method="post">
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('id<%= movies[i].poster %>').style.display='none'" class="close_pop" title="Close Modal">&times;</span>
+							<img src="<%= movies[i].poster %>" alt="Poster" class="avatar">
+						</div>
+
+						<div class="container_pop">
+							<p>Name: <%= movies[i].name %></p>
+							<p>Cast: <%= movies[i].cast %></p>
+							<p>Description: <%= movies[i].description %></p>
+						</div>
+
+						<div class="container_pop">
+							<button type="button" onclick="document.getElementById('id<%= movies[i].poster %>').style.display='none'" class="cancelbtn_popup">Cancel</button>
+							
+						</div>
+					</form>
+				</div>
+		<% } %>
+		</div>
+	</main>
+
+
+	<footer>
+		<div class="social">
+			<i class="fab fa-facebook-f"></i>
+			<i class="fab fa-twitter"></i>
+			<i class="fab fa-youtube"></i>
+			<i class="fab fa-instagram"></i>
+		</div>
+		<div class="useful_links">
+			<a href="/questions">Often asked questions</a>
+			<a href="/terms">Terms of use</a>
+			<a href="/privacypolicy">Privacy Policy</a>
+			<a href="/contact">Contact</a>
+			<a href="/cookiepolicy">Cookies Policy</a>
+			<a href="#">English <i class="fas fa-angle-down"></i></a>
+		</div>
+		<div class="rights">
+			<p>© 2021 MovieHeaven, Inc. All Rights Reserved. This website could contain content that is not suitable for children.</p>
+		</div>
+	</footer>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/7615800276.js" crossorigin="anonymous"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
